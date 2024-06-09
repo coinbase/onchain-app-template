@@ -10,8 +10,6 @@ type Props = { children: ReactNode };
 
 const queryClient = new QueryClient();
 
-const rpcUrl = '/api/rpc';
-
 function OnchainProviders({ children }: Props) {
   return (
     <WagmiProvider config={wagmiConfig}>
