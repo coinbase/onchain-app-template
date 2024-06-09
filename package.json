@@ -10,15 +10,17 @@
     "format": "biome format --write ."
   },
   "dependencies": {
-    "@coinbase/onchainkit": "0.19.2",
-    "@tanstack/react-query": "5.0.5",
+    "@coinbase/onchainkit": "0.19.6",
+    "@tanstack/react-query": "^5.40.1",
     "@uniswap/permit2-sdk": "^1.2.1",
+    "graphql": "14",
+    "graphql-request": "6",
     "next": "13.5.6",
     "permissionless": "^0.1.26",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "18",
+    "react-dom": "18",
     "siwe": "^2.3.2",
-    "viem": "^2.9.32",
+    "viem": "^2.13.7",
     "wagmi": "^2.9.5"
   },
   "devDependencies": {

@@ -28,5 +28,8 @@
       "indentStyle": "space",
       "semicolons": "always"
     }
+  },
+  "files": {
+    "ignore": [".yarn", ".changeset", ".next", "coverage"]
   }
 }
