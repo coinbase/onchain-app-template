@@ -1,3 +1,4 @@
+import { Avatar } from '@coinbase/onchainkit/identity';
 import { NEXT_PUBLIC_URL } from '../config';
 import type { Metadata } from 'next';
 
@@ -12,9 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return (
-    <>
-      ok
-    </>
-  );
+  return <>ok</>;
 }
