@@ -1,0 +1,38 @@
+{
+  "name": "an-onchain-app-in-100-components",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "biome format --write ."
+  },
+  "dependencies": {
+    "@coinbase/onchainkit": "0.19.2",
+    "@tanstack/react-query": "5.0.5",
+    "@uniswap/permit2-sdk": "^1.2.1",
+    "next": "13.5.6",
+    "permissionless": "^0.1.26",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "siwe": "^2.3.2",
+    "viem": "^2.9.32",
+    "wagmi": "^2.9.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.3",
+    "@types/node": "^20.11.8",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.7",
+    "@wagmi/cli": "latest",
+    "bufferutil": "^4.0.7",
+    "encoding": "^0.1.13",
+    "lokijs": "^1.5.12",
+    "pino-pretty": "^10.2.0",
+    "supports-color": "^9.4.0",
+    "typescript": "^5.3.3",
+    "utf-8-validate": "^6.0.3"
+  }
+}
