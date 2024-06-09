@@ -15,5 +15,18 @@
     "rules": {
       "recommended": true
     }
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "lineWidth": 100,
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "double",
+      "indentWidth": 2,
+      "indentStyle": "space",
+      "semicolons": "always"
+    }
   }
 }
