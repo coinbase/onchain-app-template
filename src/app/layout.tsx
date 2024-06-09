@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="flex flex-1 flex-col">
+      <body className="flex items-center justify-center">
         <OnchainProviders>{children}</OnchainProviders>
       </body>
     </html>
