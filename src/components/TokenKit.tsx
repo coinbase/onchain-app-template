@@ -12,7 +12,7 @@ export default function TokenKit() {
 
   const handleChange = useCallback((value: string) => {
     async function getData(value: string) {
-      const tokens: any = await getTokens({ search: value });
+      const tokens: any = await getTokens({ limit: '3', search: value });
       setFilteredTokens(tokens);
     }
     getData(value);
@@ -27,14 +27,14 @@ export default function TokenKit() {
       <aside className="flex mb-6">
         <h2 className="text-xl">Token Kit</h2>
       </aside>
-      <main className="flex h-10 items-center space-x-4">
+      <main className="flex items-center space-x-4">
         <div className="flex flex-col gap-4 rounded-3xl bg-white p-4">
           <TokenSearch onChange={handleChange} delayMs={200} />
           {filteredTokens.length > 0 && (
             <div className="flex gap-2">
               {filteredTokens.map((token) => (
                 <TokenChip
-                  key={token.name}
+                  key={token.symbol + '-' + token.name}
                   token={token}
                   onClick={handleSelect}
                 />
@@ -47,7 +47,7 @@ export default function TokenKit() {
               <div>
                 {filteredTokens.map((token) => (
                   <TokenRow
-                    key={token.name}
+                    key={token.symbol + '-' + token.name}
                     token={token}
                     onClick={handleSelect}
                   />
