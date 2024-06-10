@@ -1,13 +1,19 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Zizzamia/a-frame-in-100-lines/blob/main/public/park-4.png">
-    <img alt="OnchainKit logo vibes" src="https://github.com/Zizzamia/a-frame-in-100-lines/blob/main/public/park-4.png" width="auto">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Zizzamia/an-onchain-app-in-100-components/blob/main/public/vibes/vibes-19.png">
+    <img alt="OnchainKit logo vibes" src="https://github.com/Zizzamia/an-onchain-app-in-100-components/blob/main/public/vibes/vibes-19.png" width="auto">
   </picture>
 </p>
 
-# An Onchain App in 100 components (or less)
+# An Onchain app in 100 components (or less)
 
-An Onchain App in less than 100 components, and ready to be deployed to Vercel.
+An Onchain app in less than 100 components, and ready to be deployed to Vercel.
+
+To ensure all components work seamlessly, set the `NEXT_PUBLIC_CDP_API_KEY` in your `.env` file.
+
+You can find the API KEY on the Node page at the [Coinbase Dev Portal](https://portal.cdp.coinbase.com/products/node).
+
+<img alt="OnchainKit logo vibes" src="https://github.com/Zizzamia/an-onchain-app-in-100-components/blob/main/public/copy-api-key.png" width="auto">
 
 <br />
 
