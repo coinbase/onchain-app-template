@@ -1,5 +1,10 @@
 import { useCallback, useState } from 'react';
-import { TokenChip, TokenRow, TokenSearch, getTokens } from '@coinbase/onchainkit/token';
+import {
+  TokenChip,
+  TokenRow,
+  TokenSearch,
+  getTokens,
+} from '@coinbase/onchainkit/token';
 import type { Token } from '@coinbase/onchainkit/token';
 
 export default function TokenKit() {
@@ -28,7 +33,11 @@ export default function TokenKit() {
           {filteredTokens.length > 0 && (
             <div className="flex gap-2">
               {filteredTokens.map((token) => (
-                <TokenChip key={token.name} token={token} onClick={handleSelect} />
+                <TokenChip
+                  key={token.name}
+                  token={token}
+                  onClick={handleSelect}
+                />
               ))}
             </div>
           )}
@@ -37,7 +46,11 @@ export default function TokenKit() {
               <div className="text-body text-black">Tokens</div>
               <div>
                 {filteredTokens.map((token) => (
-                  <TokenRow key={token.name} token={token} onClick={handleSelect} />
+                  <TokenRow
+                    key={token.name}
+                    token={token}
+                    onClick={handleSelect}
+                  />
                 ))}
               </div>
             </div>
