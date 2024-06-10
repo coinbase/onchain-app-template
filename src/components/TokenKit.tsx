@@ -12,7 +12,7 @@ export default function TokenKit() {
 
   const handleChange = useCallback((value: string) => {
     async function getData(value: string) {
-      const tokens: any = await getTokens({ limit: '3', search: value });
+      const tokens: any = await getTokens({ limit: '1', search: value });
       setFilteredTokens(tokens);
     }
     getData(value);
@@ -23,13 +23,13 @@ export default function TokenKit() {
   }, []);
 
   return (
-    <section className="flex flex-col w-96 my-6 pb-4 border-b border-sky-800">
+    <section className="flex flex-col w-96 mb-6 pb-6 border-b border-sky-800">
       <aside className="flex mb-6">
         <h2 className="text-xl">Token Kit</h2>
       </aside>
       <main className="flex items-center space-x-4">
         <div className="flex flex-col gap-4 rounded-3xl bg-white p-4">
-          <TokenSearch onChange={handleChange} delayMs={200} />
+          <TokenSearch onChange={handleChange} delayMs={400} />
           {filteredTokens.length > 0 && (
             <div className="flex gap-2">
               {filteredTokens.map((token) => (

@@ -2,7 +2,7 @@ import { Avatar, Name } from '@coinbase/onchainkit/identity';
 
 export default function IdentityKit() {
   return (
-    <section className="flex flex-col w-96 my-6 pb-4 border-b border-sky-800">
+    <section className="flex flex-col w-96 mb-6 pb-6 border-b border-sky-800">
       <aside className="flex mb-6">
         <h2 className="text-xl">Identity Kit</h2>
       </aside>
