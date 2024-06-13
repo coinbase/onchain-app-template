@@ -10,8 +10,7 @@
     "format": "biome format --write ."
   },
   "dependencies": {
-    "@coinbase/onchainkit": "0.20.5",
-    "@coinbase/wallet-sdk": "^4.0.3",
+    "@coinbase/onchainkit": "0.20.6",
     "@tanstack/react-query": "^5.40.1",
     "graphql": "14",
     "graphql-request": "6",
