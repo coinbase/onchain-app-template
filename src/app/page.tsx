@@ -1,7 +1,7 @@
 'use client';
-import IdentityKit from '../components/IdentityKit';
-import TokenKit from '../components/TokenKit';
-import WalletKit from '../components/WalletKit';
+import IdentityComponents from '../components/IdentityComponents';
+import TokenComponents from '../components/TokenComponents';
+import WalletComponents from '../components/WalletComponents';
 
 export default function Page() {
   return (
@@ -38,21 +38,21 @@ export default function Page() {
       </section>
       <section className="flex flex-col w-full mb-6 pb-6 border-b border-sky-800">
         <aside className="flex mb-6">
-          <h2 className="text-xl">Identity Kit</h2>
+          <h2 className="text-xl">Identity</h2>
         </aside>
-        <IdentityKit />
+        <IdentityComponents />
       </section>
       <section className="flex flex-col w-full mb-6 pb-6 border-b border-sky-800">
         <aside className="flex mb-6">
-          <h2 className="text-xl">Token Kit</h2>
+          <h2 className="text-xl">Token</h2>
         </aside>
-        <TokenKit />
+        <TokenComponents />
       </section>
       <section className="flex flex-col w-full mb-6 pb-6 border-b border-sky-800">
         <aside className="flex mb-6">
-          <h2 className="text-xl">Wallet Kit</h2>
+          <h2 className="text-xl">Wallet</h2>
         </aside>
-        <WalletKit />
+        <WalletComponents />
       </section>
     </div>
   );

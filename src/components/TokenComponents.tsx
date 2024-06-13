@@ -7,7 +7,7 @@ import {
 } from '@coinbase/onchainkit/token';
 import type { Token } from '@coinbase/onchainkit/token';
 
-export default function TokenKit() {
+export default function TokenComponents() {
   const [filteredTokens, setFilteredTokens] = useState<Token[]>([]);
 
   const handleChange = useCallback((value: string) => {

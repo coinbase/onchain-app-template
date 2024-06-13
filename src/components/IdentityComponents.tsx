@@ -1,6 +1,6 @@
 import { Avatar, Name } from '@coinbase/onchainkit/identity';
 
-export default function IdentityKit() {
+export default function IdentityComponents() {
   return (
     <main className="flex h-10 items-center space-x-4">
       <Avatar

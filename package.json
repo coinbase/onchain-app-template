@@ -10,7 +10,7 @@
     "format": "biome format --write ."
   },
   "dependencies": {
-    "@coinbase/onchainkit": "0.19.7",
+    "@coinbase/onchainkit": "0.20.1",
     "@tanstack/react-query": "^5.40.1",
     "graphql": "14",
     "graphql-request": "6",
@@ -18,9 +18,7 @@
     "permissionless": "^0.1.26",
     "react": "^18",
     "react-dom": "^18",
-    "siwe": "^2.3.2",
-    "viem": "^2.13.7",
-    "wagmi": "^2.9.5"
+    "siwe": "^2.3.2"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.3",

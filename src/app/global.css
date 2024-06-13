@@ -1,4 +1,4 @@
-/* stylelint-disable custom-property-pattern -- RainbowKit does not use kebab-case */
+/* stylelint-disable custom-property-pattern */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
