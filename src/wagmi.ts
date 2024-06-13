@@ -10,6 +10,7 @@ export const wagmiConfig = createConfig({
     coinbaseWallet({
       appName: 'anOnchainAppIn100Components',
       preference: 'all',
+      version: '4',
     }),
   ],
   ssr: true,
