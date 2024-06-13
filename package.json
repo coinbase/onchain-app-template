@@ -18,7 +18,8 @@
     "permissionless": "^0.1.26",
     "react": "^18",
     "react-dom": "^18",
-    "siwe": "^2.3.2"
+    "siwe": "^2.3.2",
+    "viem": "^2.13.8"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.3",
