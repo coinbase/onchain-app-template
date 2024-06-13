@@ -13,6 +13,7 @@ export default function TokenComponents() {
   const handleChange = useCallback((value: string) => {
     async function getData(value: string) {
       const tokens: any = await getTokens({ limit: '1', search: value });
+      console.log('tokens:', tokens);
       setFilteredTokens(tokens);
     }
     getData(value);

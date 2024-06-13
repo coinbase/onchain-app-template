@@ -1,7 +1,8 @@
 'use client';
-import IdentityComponents from '../components/IdentityComponents';
-import TokenComponents from '../components/TokenComponents';
-import WalletComponents from '../components/WalletComponents';
+import IdentityComponents from '@/components/IdentityComponents';
+import SwapComponents from '@/components/SwapComponents';
+import TokenComponents from '@/components/TokenComponents';
+import WalletComponents from '@/components/WalletComponents';
 
 export default function Page() {
   return (
@@ -53,6 +54,12 @@ export default function Page() {
           <h2 className="text-xl">Wallet</h2>
         </aside>
         <WalletComponents />
+      </section>
+      <section className="flex flex-col w-full mb-6 pb-6 border-b border-sky-800">
+        <aside className="flex mb-6">
+          <h2 className="text-xl">Swap</h2>
+        </aside>
+        <SwapComponents />
       </section>
     </div>
   );
