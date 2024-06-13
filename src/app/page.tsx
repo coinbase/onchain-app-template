@@ -56,8 +56,12 @@ export default function Page() {
         <WalletComponents />
       </section>
       <section className="flex flex-col w-full mb-6 pb-6 border-b border-sky-800">
-        <aside className="flex mb-6">
-          <h2 className="text-xl">Swap</h2>
+        <aside className="flex flex-col mb-6">
+          <h2 className="text-xl  mb-6">Swap</h2>
+          <p className="text-body text-white italic">
+            Alert! Component is actively in development. Stay tuned for upcoming
+            releases.
+          </p>
         </aside>
         <SwapComponents />
       </section>
