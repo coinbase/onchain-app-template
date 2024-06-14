@@ -10,7 +10,7 @@
     "format": "biome format --write ."
   },
   "dependencies": {
-    "@coinbase/onchainkit": "0.20.7",
+    "@coinbase/onchainkit": "0.20.8",
     "next": "13.5.6",
     "permissionless": "^0.1.26",
     "react": "^18",
