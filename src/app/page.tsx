@@ -58,9 +58,14 @@ export default function Page() {
       <section className="flex flex-col w-full mb-6 pb-6 border-b border-sky-800">
         <aside className="flex flex-col mb-6">
           <h2 className="text-xl  mb-6">Swap</h2>
-          <p className="text-body text-white italic">
+          <p className="text-body bold text-white">
             Alert! Component is actively in development. Stay tuned for upcoming
             releases.
+          </p>
+          <p className="text-body italic text-white">
+            Note: The Swap component only prepares the transaction. The
+            developer needs to use Viem on their website to sign and send the
+            transaction to the blockchain.
           </p>
         </aside>
         <SwapComponents />

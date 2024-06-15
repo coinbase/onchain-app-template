@@ -1,5 +1,10 @@
 import { useCallback } from 'react';
-import { Swap, SwapAmountInput, SwapButton, SwapToggleButton } from '@coinbase/onchainkit/swap';
+import {
+  Swap,
+  SwapAmountInput,
+  SwapButton,
+  SwapToggleButton,
+} from '@coinbase/onchainkit/swap';
 import type { Token } from '@coinbase/onchainkit/token';
 import { useAccount } from 'wagmi';
 import type {
