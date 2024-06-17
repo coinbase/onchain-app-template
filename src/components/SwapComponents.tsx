@@ -3,6 +3,7 @@ import {
   Swap,
   SwapAmountInput,
   SwapButton,
+  SwapMessage,
   SwapToggleButton,
 } from '@coinbase/onchainkit/swap';
 import type { Token } from '@coinbase/onchainkit/token';
@@ -68,7 +69,7 @@ export default function SwapComponents() {
   return (
     <main className="flex items-center space-x-4">
       {address ? (
-        <Swap address={address} onError={onError}>
+        <Swap address={address}>
           <SwapAmountInput
             label="Sell"
             swappableTokens={swappableTokens}
@@ -83,6 +84,7 @@ export default function SwapComponents() {
             type="to"
           />
           <SwapButton onError={onError} onSubmit={onSubmit} />
+          <SwapMessage />
         </Swap>
       ) : (
         <p>Connect wallet to use Swap components</p>
