@@ -62,10 +62,6 @@ export default function SwapComponents() {
     console.log('swapTransaction:', swapTransaction);
   }, []);
 
-  const onError = useCallback((error: SwapError) => {
-    console.error('SwapError:', error);
-  }, []);
-
   return (
     <main className="flex items-center space-x-4">
       {address ? (
@@ -83,7 +79,7 @@ export default function SwapComponents() {
             token={USDCToken}
             type="to"
           />
-          <SwapButton onError={onError} onSubmit={onSubmit} />
+          <SwapButton onSubmit={onSubmit} />
           <SwapMessage />
         </Swap>
       ) : (
