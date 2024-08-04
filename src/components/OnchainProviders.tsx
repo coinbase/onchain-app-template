@@ -9,20 +9,13 @@ import { wagmiConfig } from '../wagmi';
 
 type Props = { children: ReactNode };
 
-const SCHEMA_ID =
-  '0xf8b05c79f090979bf4a80270aba232dff11a10d9ca55c4f88de95317970f0de9';
-
 const queryClient = new QueryClient();
 
 function OnchainProviders({ children }: Props) {
   return (
     <WagmiProvider config={wagmiConfig}>
       <QueryClientProvider client={queryClient}>
-        <OnchainKitProvider
-          apiKey={NEXT_PUBLIC_CDP_API_KEY}
-          chain={base}
-          schemaId={SCHEMA_ID}
-        >
+        <OnchainKitProvider apiKey={NEXT_PUBLIC_CDP_API_KEY} chain={base}>
           {children}
         </OnchainKitProvider>
       </QueryClientProvider>

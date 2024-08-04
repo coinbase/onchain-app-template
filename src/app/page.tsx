@@ -1,5 +1,5 @@
 'use client';
-import IdentityComponents from '@/components/IdentityComponents';
+import WalletComponents from '../components/WalletComponents';
 
 export default function Page() {
   return (
@@ -13,7 +13,9 @@ export default function Page() {
         <aside className="mb-6 flex">
           <h2 className="text-xl">Identity</h2>
         </aside>
-        <IdentityComponents />
+        <main className="flex h-10 items-center space-x-4">
+          <WalletComponents />
+        </main>
       </section>
     </div>
   );

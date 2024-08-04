@@ -1,9 +1,40 @@
-import { ConnectAccount } from '@coinbase/onchainkit/wallet';
+'use client';
+import {
+  Address,
+  Avatar,
+  EthBalance,
+  Identity,
+  Name,
+} from '@coinbase/onchainkit/identity';
+import {
+  ConnectWallet,
+  Wallet,
+  WalletDropdown,
+  WalletDropdownDisconnect,
+  WalletDropdownLink,
+} from '@coinbase/onchainkit/wallet';
 
 export default function WalletComponents() {
   return (
-    <main className="flex h-10 items-center space-x-4">
-      <ConnectAccount />
-    </main>
+    <>
+      <Wallet>
+        <ConnectWallet>
+          <Avatar className="h-6 w-6" />
+          <Name />
+        </ConnectWallet>
+        <WalletDropdown>
+          <Identity className="px-4 pt-3 pb-2" hasCopyAddressOnClick={true}>
+            <Avatar />
+            <Name />
+            <Address />
+            <EthBalance />
+          </Identity>
+          <WalletDropdownLink icon="wallet" href="https://wallet.coinbase.com">
+            Go to Wallet Dashboard
+          </WalletDropdownLink>
+          <WalletDropdownDisconnect />
+        </WalletDropdown>
+      </Wallet>
+    </>
   );
 }
