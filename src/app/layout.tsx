@@ -1,6 +1,6 @@
-import { NEXT_PUBLIC_URL } from '../config';
-import OnchainProviders from '../components/OnchainProviders';
 import type { Metadata } from 'next';
+import OnchainProviders from '../components/OnchainProviders';
+import { NEXT_PUBLIC_URL } from '../config';
 
 import './global.css';
 import '@coinbase/onchainkit/styles.css';

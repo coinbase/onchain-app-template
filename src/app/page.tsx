@@ -3,14 +3,14 @@ import IdentityComponents from '@/components/IdentityComponents';
 
 export default function Page() {
   return (
-    <div className="flex flex-col w-96 md:w-[600px]">
-      <section className="flex flex-col w-full mb-6 pb-6 border-b border-sky-800">
-        <aside className="flex mb-6">
+    <div className="flex w-96 flex-col md:w-[600px]">
+      <section className="mb-6 flex w-full flex-col border-sky-800 border-b pb-6">
+        <aside className="mb-6 flex">
           <h2 className="text-2xl">An onchain app in 100 components or less</h2>
         </aside>
       </section>
-      <section className="flex flex-col w-full mb-6 pb-6 border-b border-sky-800">
-        <aside className="flex mb-6">
+      <section className="mb-6 flex w-full flex-col border-sky-800 border-b pb-6">
+        <aside className="mb-6 flex">
           <h2 className="text-xl">Identity</h2>
         </aside>
         <IdentityComponents />

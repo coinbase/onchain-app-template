@@ -3,22 +3,27 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "format": "biome format --write ."
+    "check": "biome check --write .",
+    "ci:check": "biome ci --formatter-enabled=false --linter-enabled=false",
+    "ci:format": "biome ci --linter-enabled=false --organize-imports-enabled=false",
+    "ci:lint": "biome ci --formatter-enabled=false --organize-imports-enabled=false",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
+    "format": "biome format --write .",
+    "lint": "biome lint --write .",
+    "lint:unsafe": "biome lint --write --unsafe .",
+    "start": "next start"  
   },
   "dependencies": {
     "@coinbase/onchainkit": "^0.27.0",
-    "next": "13.5.6",
+    "next": "^14.2.5",
     "permissionless": "^0.1.26",
     "react": "^18",
     "react-dom": "^18",
     "siwe": "^2.3.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.7.3",
+    "@biomejs/biome": "^1.8.0",
     "@types/node": "^20.11.8",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.7",
