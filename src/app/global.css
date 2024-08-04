@@ -5,13 +5,13 @@
 
 :root {
   /* Palette */
-  --palette-bg-black: rgb(21, 26, 38);
-  --palette-bg-white: #fff;
+  --palette-bg-black: #fff;
+  --palette-bg-white: rgb(21, 26, 38);
 
   /* Indicates that the element can be rendered using 
    * the operating system dark color scheme. 
    * https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme */
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 *,
