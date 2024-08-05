@@ -6,7 +6,7 @@ export default function Page() {
     <div className="flex w-96 flex-col md:w-[600px]">
       <section className="mb-6 flex w-full flex-col border-sky-800 border-b pb-6">
         <aside className="mb-6 flex">
-          <h2 className="text-2xl">An onchain app in 100 components or less</h2>
+          <h2 className="text-2xl">Onchain App Template</h2>
         </aside>
       </section>
       <section className="mb-6 flex w-full flex-col border-sky-800 border-b pb-6">

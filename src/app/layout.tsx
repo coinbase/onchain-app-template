@@ -11,10 +11,10 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'An Onchain App in 100 Components',
+  title: 'Onchain App Template',
   description: 'LFG',
   openGraph: {
-    title: 'An Onchain App in 100 Components',
+    title: 'Onchain App Template',
     description: 'LFG',
     images: [`${NEXT_PUBLIC_URL}/vibes/vibes-19.png`],
   },
