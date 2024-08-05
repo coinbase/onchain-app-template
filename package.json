@@ -1,0 +1,50 @@
+{
+  "name": "onchain-app-template",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "next build",
+    "check": "biome check --write .",
+    "ci:check": "biome ci --formatter-enabled=false --linter-enabled=false",
+    "ci:format": "biome ci --linter-enabled=false --organize-imports-enabled=false",
+    "ci:lint": "biome ci --formatter-enabled=false --organize-imports-enabled=false",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
+    "format": "biome format --write .",
+    "lint": "biome lint --write .",
+    "lint:unsafe": "biome lint --write --unsafe .",
+    "start": "next start",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@coinbase/onchainkit": "^0.27.0",
+    "next": "^14.2.5",
+    "permissionless": "^0.1.26",
+    "react": "^18",
+    "react-dom": "^18",
+    "siwe": "^2.3.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.0",
+    "@types/node": "^20.11.8",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.7",
+    "@vitest/coverage-v8": "^2.0.2",
+    "@vitest/ui": "^2.0.1",
+    "@wagmi/cli": "latest",
+    "autoprefixer": "^10.4.19",
+    "bufferutil": "^4.0.7",
+    "encoding": "^0.1.13",
+    "lokijs": "^1.5.12",
+    "jsdom": "^24.1.0",
+    "pino-pretty": "^10.2.0",
+    "postcss": "^8.4.38",
+    "supports-color": "^9.4.0",
+    "tailwindcss": "^3.4.0",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^14.2.0",
+    "typescript": "^5.3.3",
+    "utf-8-validate": "^6.0.3",
+    "vitest": "^2.0.1"
+  }
+}
