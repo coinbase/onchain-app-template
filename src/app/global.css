@@ -73,3 +73,7 @@ of a div added by rainbowkit provider */
 body > div {
   height: 100%;
 }
+
+a {
+  text-decoration: none;
+}

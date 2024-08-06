@@ -4,6 +4,7 @@ import SignupButton from '../components/SignupButton';
 import { useAccount } from 'wagmi';
 import WalletWrapper from 'src/components/WalletWrapper';
 import TransactionWrapper from 'src/components/TransactionWrapper';
+import BaseSvg from 'src/components/BaseSvg';
 
 export default function Page() {
   const { address } = useAccount();
@@ -34,24 +35,39 @@ export default function Page() {
         )}
       </section>
       <section className="mb-6 mt-12 flex w-full justify-between">
-        <aside className="flex">
-          <h3 className="text-m">Built with love on Base</h3>
+        <aside className="flex items-center">
+          <h3 className="text-m mr-2">Built with love on</h3>
+          <BaseSvg />
+          <h3 className="text-m ml-1 text-[#0052FF]">Base</h3>
         </aside>
         <ul className="flex gap-6">
           <li className="flex">
-            <p>Docs</p>
+            <a href="https://onchainkit.xyz" target="_blank">
+              Docs
+            </a>
           </li>
           <li className="flex">
-            <p>Github</p>
+            <a href="https://github.com/coinbase/onchainkit" target="_blank">
+              Github
+            </a>
           </li>
           <li className="flex">
-            <p>Discord</p>
+            <a href="https://discord.gg/8gW3h6w5" target="_blank">
+              Discord
+            </a>
           </li>
           <li className="flex">
-            <p>Figma</p>
+            <a
+              href="https://www.figma.com/community/file/1370194397345450683/onchainkit"
+              target="_blank"
+            >
+              Figma
+            </a>
           </li>
           <li className="flex">
-            <p>X</p>
+            <a href="https://x.com/Onchainkit" target="_blank">
+              X
+            </a>
           </li>
         </ul>
       </section>
