@@ -4,6 +4,7 @@ import { NEXT_PUBLIC_URL } from '../config';
 
 import './global.css';
 import '@coinbase/onchainkit/styles.css';
+import '@rainbow-me/rainbowkit/styles.css';
 
 export const viewport = {
   width: 'device-width',

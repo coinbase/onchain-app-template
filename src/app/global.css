@@ -63,3 +63,13 @@ ul {
   position: relative;
   z-index: 0;
 }
+
+.ockConnectWallet_Container span {
+  color: #030712;
+}
+
+/* i believe this is necessary because 
+of a div added by rainbowkit provider */
+body > div {
+  height: 100%;
+}
