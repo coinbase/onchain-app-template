@@ -72,8 +72,15 @@ ul {
 of a div added by rainbowkit provider */
 body > div {
   height: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
 
 a {
   text-decoration: none;
+}
+
+.templateSection > div {
+  max-width: 100%;;
 }
