@@ -23,7 +23,7 @@ export default function Footer() {
       </aside>
       <ul className="flex gap-6">
         {docLinks.map(({ href, title }) => (
-          <li className="flex">
+          <li className="flex" id={href}>
             <a href={href} target="_blank" rel="noreferrer">
               <p>{title}</p>
             </a>
