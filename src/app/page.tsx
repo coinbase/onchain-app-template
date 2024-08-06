@@ -1,10 +1,10 @@
 'use client';
+import BaseSvg from 'src/components/BaseSvg';
+import TransactionWrapper from 'src/components/TransactionWrapper';
+import WalletWrapper from 'src/components/WalletWrapper';
+import { useAccount } from 'wagmi';
 import LoginButton from '../components/LoginButton';
 import SignupButton from '../components/SignupButton';
-import { useAccount } from 'wagmi';
-import WalletWrapper from 'src/components/WalletWrapper';
-import TransactionWrapper from 'src/components/TransactionWrapper';
-import BaseSvg from 'src/components/BaseSvg';
 
 export default function Page() {
   const { address } = useAccount();
