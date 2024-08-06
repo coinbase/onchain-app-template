@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import WalletComponents from './WalletComponents';
+import WalletWrapper from './WalletWrapper';
 
-describe('WalletComponents', () => {
+describe('WalletWrapper', () => {
   it('should renders', () => {
-    render(<WalletComponents />);
+    render(<WalletWrapper />);
     expect(true).toBeTruthy();
   });
 });
