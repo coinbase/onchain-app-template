@@ -1,7 +1,5 @@
 'use client';
 
-import BaseSvg from './BaseSvg';
-
 const docLinks = [
   { href: 'https://onchainkit.xyz', title: 'Docs' },
   { href: 'https://github.com/coinbase/onchainkit', title: 'Github' },
@@ -17,14 +15,12 @@ export default function Footer() {
   return (
     <section className="mt-12 mb-6 flex w-full flex-col justify-between gap-2 md:flex-row ">
       <aside className="flex items-center justify-center md:justify-start">
-        <h3 className="mr-2 text-m">Built with love on</h3>
-        <BaseSvg />
-        <h3 className="ml-1 text-[#0052FF] text-m">Base</h3>
+        <h3 className="mr-2 text-m">Built with love by the OnchainKit team</h3>
       </aside>
       <ul className="flex justify-center gap-6 md:justify-start">
         {docLinks.map(({ href, title }) => (
           <li className="flex" key={href}>
-            <a href={href} target="_blank" rel="noreferrer">
+            <a href={href} target="_blank" rel="noreferrer" title={title}>
               <p>{title}</p>
             </a>
           </li>

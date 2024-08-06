@@ -1,3 +1,4 @@
+'use client';
 import { connectorsForWallets } from '@rainbow-me/rainbowkit';
 import {
   coinbaseWallet,
@@ -6,6 +7,7 @@ import {
 } from '@rainbow-me/rainbowkit/wallets';
 import { http, createConfig } from 'wagmi';
 import { baseSepolia } from 'wagmi/chains';
+import { WALLET_CONNECTOR_PROJECT_ID } from './config';
 
 const connectors = connectorsForWallets(
   [
@@ -20,7 +22,7 @@ const connectors = connectorsForWallets(
   ],
   {
     appName: 'onchainkit',
-    projectId: 'b9c838acbe76023b550d93eae506c69b',
+    projectId: WALLET_CONNECTOR_PROJECT_ID || '',
   },
 );
 
