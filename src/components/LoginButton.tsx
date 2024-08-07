@@ -2,5 +2,5 @@
 import WalletWrapper from './WalletWrapper';
 
 export default function LoginButton() {
-  return <WalletWrapper text="Log in" />;
+  return <WalletWrapper className="min-w-[90px]" text="Log in" />;
 }
