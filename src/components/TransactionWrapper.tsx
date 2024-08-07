@@ -38,7 +38,7 @@ export default function TransactionWrapper({
         contracts={contracts}
         className="w-[450px]"
       >
-        <TransactionButton className="mt-0 mr-auto ml-auto w-[450px] text-[white]" />
+        <TransactionButton className='mt-0 mr-auto ml-auto w-[450px] max-w-full text-[white]' text="Collect" />
         <TransactionStatus>
           <TransactionStatusLabel />
           <TransactionStatusAction />
