@@ -9,16 +9,27 @@
 
 An Onchain App Template build with [OnchainKit](https://onchainkit.xyz), and ready to be deployed to Vercel.
 
-To ensure all components work seamlessly, set the `NEXT_PUBLIC_CDP_API_KEY` in your `.env` file.
-
-You can find the API KEY on the Node page at the [Coinbase Dev Portal](https://portal.cdp.coinbase.com/products/node).
-
-<br />
-
 Play with it live on https://onchain-app-template.vercel.app
 
 Have fun! ⛵️
 
+<br />
+
+## Setup
+
+To ensure all components work seamlessly, set the following environment variables in your `.env` file using `.local.env.example` as a reference.
+
+You can find the API key on the [Coinbase Developer Portal's OnchainKit page](https://portal.cdp.coinbase.com/products/onchainkit). If you don't have an account, you will need to create one. 
+
+You can find your Wallet Connector project ID at [Wallet Connect](https://cloud.walletconnect.com).
+
+```sh
+# See https://portal.cdp.coinbase.com/products/onchainkit
+NEXT_PUBLIC_CDP_API_KEY="GET_FROM_COINBASE_DEVELOPER_PLATFORM"
+
+# See https://cloud.walletconnect.com
+WALLET_CONNECTOR_PROJECT_ID="GET_FROM_WALLET_CONNECT"
+```
 <br />
 
 ## Locally run
@@ -33,6 +44,7 @@ bun i
 # Run Next app
 bun run dev
 ```
+<br />
 
 ## Resources
 
