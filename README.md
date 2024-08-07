@@ -19,9 +19,9 @@ Have fun! ⛵️
 
 To ensure all components work seamlessly, set the following environment variables in your `.env` file using `.local.env.example` as a reference.
 
-You can find the API KEY on the Onchainkit page at the [Coinbase Dev Portal](https://portal.cdp.coinbase.com/products/onchainkit).
+You can find the API key on the [Coinbase Developer Portal's OnchainKit page](https://portal.cdp.coinbase.com/products/onchainkit). If you don't have an account, you will need to create one. 
 
-You can find the PROJECT ID at [Wallet Connect](https://cloud.walletconnect.com).
+You can find your Wallet Connector project ID at [Wallet Connect](https://cloud.walletconnect.com).
 
 ```sh
 # See https://portal.cdp.coinbase.com/products/onchainkit
