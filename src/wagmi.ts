@@ -7,7 +7,14 @@ import {
 } from '@rainbow-me/rainbowkit/wallets';
 import { http, createConfig } from 'wagmi';
 import { baseSepolia } from 'wagmi/chains';
-import { WALLET_CONNECTOR_PROJECT_ID } from './config';
+import { NEXT_PUBLIC_WC_PROJECT_ID } from './config';
+
+const projectId = NEXT_PUBLIC_WC_PROJECT_ID ?? '';
+if (!projectId) {
+  const providerErrMessage =
+    'To connect to all Wallets you need to provide a NEXT_PUBLIC_WC_PROJECT_ID env variable';
+  throw new Error(providerErrMessage);
+}
 
 const connectors = connectorsForWallets(
   [
@@ -22,7 +29,7 @@ const connectors = connectorsForWallets(
   ],
   {
     appName: 'onchainkit',
-    projectId: WALLET_CONNECTOR_PROJECT_ID || '',
+    projectId,
   },
 );
 
