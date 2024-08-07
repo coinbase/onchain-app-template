@@ -5,6 +5,7 @@ import WalletWrapper from 'src/components/WalletWrapper';
 import { useAccount } from 'wagmi';
 import LoginButton from '../components/LoginButton';
 import SignupButton from '../components/SignupButton';
+import OnchainkitSvg from 'src/svg/OnchainkitSvg';
 
 export default function Page() {
   const { address } = useAccount();
@@ -13,7 +14,14 @@ export default function Page() {
     <div className="flex h-full w-96 max-w-full flex-col md:w-[1008px]">
       <section className="mt-6 mb-6 flex w-full flex-col md:flex-row">
         <div className="flex w-full flex-col items-center justify-between gap-2 md:flex-row md:gap-0">
-          <h2 className="text-3xl">Onchainkit</h2>
+          <a
+            href="https://onchainkit.xyz/"
+            title="onchainkit"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <OnchainkitSvg />
+          </a>
           <div className="flex gap-3">
             <SignupButton />
             {!address && <LoginButton />}
