@@ -1,21 +1,36 @@
 'use client';
 
+import {
+  DISCORD_LINK,
+  FIGMA_LINK,
+  GITHUB_LINK,
+  ONCHAINKIT_LINK,
+  TWITTER_LINK,
+} from 'src/links';
+
 const docLinks = [
-  { href: 'https://onchainkit.xyz', title: 'Docs' },
-  { href: 'https://github.com/coinbase/onchainkit', title: 'Github' },
-  { href: 'https://discord.gg/8gW3h6w5', title: 'Discord' },
-  {
-    href: 'https://www.figma.com/community/file/1370194397345450683/onchainkit',
-    title: 'Figma',
-  },
-  { href: 'https://x.com/Onchainkit', title: 'X' },
+  { href: ONCHAINKIT_LINK, title: 'Docs' },
+  { href: GITHUB_LINK, title: 'Github' },
+  { href: DISCORD_LINK, title: 'Discord' },
+  { href: FIGMA_LINK, title: 'Figma' },
+  { href: TWITTER_LINK, title: 'X' },
 ];
 
 export default function Footer() {
   return (
     <section className="mt-12 mb-6 flex w-full flex-col justify-between gap-2 md:flex-row ">
       <aside className="flex items-center justify-center md:justify-start">
-        <h3 className="mr-2 text-m">Built with love by the OnchainKit team</h3>
+        <h3 className="mr-2 text-m">
+          Built with love by{' '}
+          <a
+            href={ONCHAINKIT_LINK}
+            target="_blank"
+            rel="noreferrer"
+            title="OnchainKit"
+          >
+            OnchainKit
+          </a>
+        </h3>
       </aside>
       <ul className="flex justify-center gap-6 md:justify-start">
         {docLinks.map(({ href, title }) => (

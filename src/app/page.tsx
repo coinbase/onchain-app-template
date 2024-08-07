@@ -6,6 +6,7 @@ import OnchainkitSvg from 'src/svg/OnchainkitSvg';
 import { useAccount } from 'wagmi';
 import LoginButton from '../components/LoginButton';
 import SignupButton from '../components/SignupButton';
+import { ONCHAINKIT_LINK } from 'src/links';
 
 export default function Page() {
   const { address } = useAccount();
@@ -15,7 +16,7 @@ export default function Page() {
       <section className="mt-6 mb-6 flex w-full flex-col md:flex-row">
         <div className="flex w-full flex-col items-center justify-between gap-2 md:flex-row md:gap-0">
           <a
-            href="https://onchainkit.xyz/"
+            href={ONCHAINKIT_LINK}
             title="onchainkit"
             target="_blank"
             rel="noreferrer"
