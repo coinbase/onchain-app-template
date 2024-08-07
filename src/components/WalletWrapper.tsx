@@ -14,11 +14,24 @@ import {
   WalletDropdownLink,
 } from '@coinbase/onchainkit/wallet';
 
-export default function WalletComponents() {
+type WalletWrapperParams = {
+  text?: string;
+  className?: string;
+  withWalletAggregator?: boolean;
+};
+export default function WalletWrapper({
+  className,
+  text,
+  withWalletAggregator = false,
+}: WalletWrapperParams) {
   return (
     <>
       <Wallet>
-        <ConnectWallet>
+        <ConnectWallet
+          withWalletAggregator={withWalletAggregator}
+          text={text}
+          className={className}
+        >
           <Avatar className="h-6 w-6" />
           <Name />
         </ConnectWallet>
