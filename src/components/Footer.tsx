@@ -7,6 +7,7 @@ import {
   ONCHAINKIT_LINK,
   TWITTER_LINK,
 } from 'src/links';
+import ArrowSvg from 'src/svg/ArrowSvg';
 
 const docLinks = [
   { href: ONCHAINKIT_LINK, title: 'Docs' },
@@ -35,8 +36,15 @@ export default function Footer() {
       <ul className="flex justify-center gap-6 md:justify-start">
         {docLinks.map(({ href, title }) => (
           <li className="flex" key={href}>
-            <a href={href} target="_blank" rel="noreferrer" title={title}>
+            <a
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              title={title}
+              className="flex items-center gap-1"
+            >
               <p>{title}</p>
+              <ArrowSvg />
             </a>
           </li>
         ))}
