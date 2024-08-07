@@ -33,7 +33,7 @@ export default function Footer() {
           </a>
         </h3>
       </aside>
-      <ul className="flex flex-wrap justify-center gap-6 max-w-full md:justify-start">
+      <ul className="flex max-w-full flex-wrap justify-center gap-6 md:justify-start">
         {docLinks.map(({ href, title }) => (
           <li className="flex" key={href}>
             <a
