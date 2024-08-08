@@ -6,8 +6,9 @@ import {
   TransactionStatusAction,
   TransactionStatusLabel,
 } from '@coinbase/onchainkit/transaction';
-import { clickContractAbi, clickContractAddress } from 'src/constants';
+import { mintABI, mintContractAddress } from 'src/constants';
 import type { Address, ContractFunctionParameters } from 'viem';
+import { useAccount } from 'wagmi';
 
 type TransactionWrapperParams = {
   address: Address;
@@ -16,18 +17,14 @@ type TransactionWrapperParams = {
 export default function TransactionWrapper({
   address,
 }: TransactionWrapperParams) {
+  const account = useAccount();
+  
   const contracts = [
     {
-      address: clickContractAddress,
-      abi: clickContractAbi,
-      functionName: 'click',
-      args: [],
-    },
-    {
-      address: clickContractAddress,
-      abi: clickContractAbi,
-      functionName: 'click',
-      args: [],
+      address: mintContractAddress,
+      abi: mintABI,
+      functionName: 'mint',
+      args: [account.address, 1, 1, [], '0x'],
     },
   ] as ContractFunctionParameters[];
 
