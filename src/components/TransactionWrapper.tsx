@@ -6,7 +6,7 @@ import {
   TransactionStatusAction,
   TransactionStatusLabel,
 } from '@coinbase/onchainkit/transaction';
-import type { TransactionError } from '@coinbase/onchainkit/transaction';
+import type { TransactionError, TransactionResponse } from '@coinbase/onchainkit/transaction';
 import { mintABI, mintContractAddress } from 'src/constants';
 import type { Address, ContractFunctionParameters } from 'viem';
 import { parseEther } from 'viem';
@@ -49,7 +49,7 @@ export default function TransactionWrapper({
     console.error('Transaction error:', err);
   };
 
-  const handleSuccess = (response: any) => {
+  const handleSuccess = (response: TransactionResponse) => {
     console.log('Transaction successful', response);
   };
 
