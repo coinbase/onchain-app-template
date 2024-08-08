@@ -34,7 +34,7 @@ export default function TransactionWrapper({
         tokenId, 
         quantity, 
         rewardsRecipients, 
-        minterArguments
+        minterArguments,
       ],
     },
   ] as ContractFunctionParameters[];
