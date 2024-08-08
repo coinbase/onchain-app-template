@@ -6,8 +6,22 @@ import {
   TransactionStatusAction,
   TransactionStatusLabel,
 } from '@coinbase/onchainkit/transaction';
-import { clickContractAbi, clickContractAddress } from 'src/constants';
+import type {
+  TransactionError,
+  TransactionResponse,
+} from '@coinbase/onchainkit/transaction';
+import {
+  BASE_SEPOLIA_CHAIN_ID,
+  collectionAddress,
+  comment,
+  mintABI,
+  mintContractAddress,
+  mintReferral,
+  quantity,
+  tokenId,
+} from 'src/constants';
 import type { Address, ContractFunctionParameters } from 'viem';
+import { parseEther } from 'viem';
 
 type TransactionWrapperParams = {
   address: Address;
@@ -16,20 +30,32 @@ type TransactionWrapperParams = {
 export default function TransactionWrapper({
   address,
 }: TransactionWrapperParams) {
+  const mintTo = address;
+
   const contracts = [
     {
-      address: clickContractAddress,
-      abi: clickContractAbi,
-      functionName: 'click',
-      args: [],
+      address: mintContractAddress,
+      abi: mintABI,
+      functionName: 'mint',
+      args: [
+        mintTo,
+        BigInt(quantity),
+        collectionAddress,
+        BigInt(tokenId),
+        mintReferral,
+        comment,
+      ],
+      value: parseEther('0.000111'),
     },
-    {
-      address: clickContractAddress,
-      abi: clickContractAbi,
-      functionName: 'click',
-      args: [],
-    },
-  ] as ContractFunctionParameters[];
+  ] as unknown as ContractFunctionParameters[];
+
+  const handleError = (err: TransactionError) => {
+    console.error('Transaction error:', err);
+  };
+
+  const handleSuccess = (response: TransactionResponse) => {
+    console.log('Transaction successful', response);
+  };
 
   return (
     <div className="flex w-[450px]">
@@ -37,6 +63,9 @@ export default function TransactionWrapper({
         address={address}
         contracts={contracts}
         className="w-[450px]"
+        chainId={BASE_SEPOLIA_CHAIN_ID}
+        onError={handleError}
+        onSuccess={handleSuccess}
       >
         <TransactionButton
           className="mt-0 mr-auto ml-auto w-[450px] max-w-full text-[white]"
