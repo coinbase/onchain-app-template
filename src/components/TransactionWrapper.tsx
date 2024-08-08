@@ -10,6 +10,11 @@ import { mintABI, mintContractAddress } from 'src/constants';
 import type { Address, ContractFunctionParameters } from 'viem';
 import { useAccount } from 'wagmi';
 
+const tokenId = 1;
+const quantity = 1;
+const rewardsRecipients: [] = [];
+const minterArguments = '0x';
+
 type TransactionWrapperParams = {
   address: Address;
 };
@@ -24,7 +29,13 @@ export default function TransactionWrapper({
       address: mintContractAddress,
       abi: mintABI,
       functionName: 'mint',
-      args: [account.address, 1, 1, [], '0x'],
+      args: [
+        account.address, 
+        tokenId, 
+        quantity, 
+        rewardsRecipients, 
+        minterArguments
+      ],
     },
   ] as ContractFunctionParameters[];
 
