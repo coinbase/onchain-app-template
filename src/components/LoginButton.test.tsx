@@ -35,9 +35,9 @@ const renderWithProviders = (component: JSX.Element) => {
 };
 
 describe('LoginButton', () => {
-    it('should render', () => {
-      renderWithProviders(<LoginButton />);
-      const walletWrapper = screen.getByTestId('ockConnectWallet_Container');
-      expect(walletWrapper).toBeInTheDocument();
-    });
+  it('should render', () => {
+    renderWithProviders(<LoginButton />);
+    const walletWrapper = screen.getByTestId('ockConnectWallet_Container');
+    expect(walletWrapper).toBeInTheDocument();
   });
+});
