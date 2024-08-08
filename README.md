@@ -28,7 +28,7 @@ You can find your Wallet Connector project ID at [Wallet Connect](https://cloud.
 NEXT_PUBLIC_CDP_API_KEY="GET_FROM_COINBASE_DEVELOPER_PLATFORM"
 
 # See https://cloud.walletconnect.com
-WALLET_CONNECTOR_PROJECT_ID="GET_FROM_WALLET_CONNECT"
+NEXT_PUBLIC_WC_PROJECT_ID="GET_FROM_WALLET_CONNECT"
 ```
 <br />
 
