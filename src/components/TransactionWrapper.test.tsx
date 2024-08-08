@@ -1,10 +1,10 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import TransactionWrapper from './TransactionWrapper';
 import { http, WagmiProvider, createConfig } from 'wagmi';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { base } from 'wagmi/chains';
 import { mock } from 'wagmi/connectors';
+import TransactionWrapper from './TransactionWrapper';
 
 const config = createConfig({
   chains: [base],
@@ -35,7 +35,7 @@ const renderWithProviders = (component: JSX.Element) => {
 
 describe('TransactionWrapper', () => {
   it('should renders', () => {
-    renderWithProviders(<TransactionWrapper address='0x' />);
+    renderWithProviders(<TransactionWrapper address="0x" />);
     const transaction = screen.getByText('Collect');
     expect(transaction).toBeInTheDocument();
   });
