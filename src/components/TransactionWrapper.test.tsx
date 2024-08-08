@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { http, WagmiProvider, createConfig } from 'wagmi';
 import { base } from 'wagmi/chains';
 import { mock } from 'wagmi/connectors';
-import WalletWrapper from './WalletWrapper';
+import TransactionWrapper from './TransactionWrapper';
 
 const config = createConfig({
   chains: [base],
@@ -23,20 +23,20 @@ const config = createConfig({
 });
 const queryClient = new QueryClient();
 
-const renderWithProviders = (Component: React.ComponentType) => {
+const renderWithProviders = (component: JSX.Element) => {
   return render(
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <Component />
+        {component}
       </QueryClientProvider>
     </WagmiProvider>,
   );
 };
 
-describe('WalletWrapper', () => {
+describe('TransactionWrapper', () => {
   it('should renders', () => {
-    renderWithProviders(WalletWrapper);
-    const wallet = screen.getByTestId('ockConnectWallet_Container');
-    expect(wallet).toBeInTheDocument();
+    renderWithProviders(<TransactionWrapper address="0x" />);
+    const transaction = screen.getByText('Collect');
+    expect(transaction).toBeInTheDocument();
   });
 });

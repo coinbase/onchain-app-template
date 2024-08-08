@@ -10,6 +10,8 @@ import type {
   TransactionError,
   TransactionResponse,
 } from '@coinbase/onchainkit/transaction';
+import type { Address, ContractFunctionParameters } from 'viem';
+import { parseEther } from 'viem';
 import {
   BASE_SEPOLIA_CHAIN_ID,
   collectionAddress,
@@ -19,9 +21,7 @@ import {
   mintReferral,
   quantity,
   tokenId,
-} from 'src/constants';
-import type { Address, ContractFunctionParameters } from 'viem';
-import { parseEther } from 'viem';
+} from '../constants';
 
 type TransactionWrapperParams = {
   address: Address;
