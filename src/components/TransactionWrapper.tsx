@@ -19,7 +19,7 @@ import {
   mintReferral,
   quantity,
   tokenId,
-} from '../constants';
+} from 'src/constants';
 import type { Address, ContractFunctionParameters } from 'viem';
 import { parseEther } from 'viem';
 
