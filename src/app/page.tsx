@@ -23,7 +23,7 @@ export default function Page() {
           >
             <OnchainkitSvg />
           </a>
-          <div className="flex gap-3">
+          <div className="flex gap-3 pt-3 md:pt-0">
             <SignupButton />
             {!address && <LoginButton />}
           </div>

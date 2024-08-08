@@ -19,7 +19,7 @@ const docLinks = [
 
 export default function Footer() {
   return (
-    <section className="mt-12 mb-6 flex w-full flex-col justify-between gap-2 md:flex-row ">
+    <section className="mt-12 mb-6 flex w-full flex-col justify-between gap-2 pb-4 md:flex-row md:pb-0">
       <aside className="flex items-center justify-center md:justify-start">
         <h3 className="mr-2 text-m">
           Built with love by{' '}
@@ -28,12 +28,13 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
             title="OnchainKit"
+            className="font-semibold hover:text-indigo-600"
           >
             OnchainKit
           </a>
         </h3>
       </aside>
-      <ul className="flex max-w-full flex-wrap justify-center gap-6 md:justify-start">
+      <ul className="flex max-w-full flex-wrap justify-center gap-3 md:justify-start md:gap-6">
         {docLinks.map(({ href, title }) => (
           <li className="flex" key={href}>
             <a
