@@ -10,7 +10,6 @@ import type { TransactionError } from '@coinbase/onchainkit/transaction';
 import { mintABI, mintContractAddress } from 'src/constants';
 import type { Address, ContractFunctionParameters } from 'viem';
 import { parseEther } from 'viem';
-import { useAccount } from 'wagmi';
 
 const BASE_SEPOLIA_CHAIN_ID = 84532;
 
@@ -27,8 +26,7 @@ type TransactionWrapperParams = {
 export default function TransactionWrapper({
   address,
 }: TransactionWrapperParams) {
-  const account = useAccount();
-  const mintTo = account.address;
+  const mintTo = address;
 
   const contracts = [
     {
