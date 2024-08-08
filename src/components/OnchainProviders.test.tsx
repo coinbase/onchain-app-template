@@ -1,4 +1,3 @@
-
 import { render, screen } from '@testing-library/react';
 import { base } from 'viem/chains';
 import { describe, expect, it, vi } from 'vitest';
