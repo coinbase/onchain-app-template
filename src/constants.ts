@@ -28,3 +28,11 @@ export const mintABI = [
     type: 'function',
   },
 ] as const;
+
+export const BASE_SEPOLIA_CHAIN_ID = 84532;
+
+export const collectionAddress = '0xd6915560d3bb24aec04dc42ef409921ed1931510';
+export const tokenId = '1';
+export const quantity = '1';
+export const mintReferral = '0x0000000000000000000000000000000000000000';
+export const comment = 'testing';

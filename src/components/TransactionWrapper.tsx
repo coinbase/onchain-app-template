@@ -6,18 +6,22 @@ import {
   TransactionStatusAction,
   TransactionStatusLabel,
 } from '@coinbase/onchainkit/transaction';
-import type { TransactionError, TransactionResponse } from '@coinbase/onchainkit/transaction';
-import { mintABI, mintContractAddress } from 'src/constants';
+import type {
+  TransactionError,
+  TransactionResponse,
+} from '@coinbase/onchainkit/transaction';
+import {
+  BASE_SEPOLIA_CHAIN_ID,
+  collectionAddress,
+  comment,
+  mintABI,
+  mintContractAddress,
+  mintReferral,
+  quantity,
+  tokenId,
+} from 'src/constants';
 import type { Address, ContractFunctionParameters } from 'viem';
 import { parseEther } from 'viem';
-
-const BASE_SEPOLIA_CHAIN_ID = 84532;
-
-const collectionAddress = '0xd6915560d3bb24aec04dc42ef409921ed1931510';
-const tokenId = '1';
-const quantity = '1';
-const mintReferral = '0x0000000000000000000000000000000000000000';
-const comment = 'testing';
 
 type TransactionWrapperParams = {
   address: Address;
