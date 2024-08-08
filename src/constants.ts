@@ -14,19 +14,19 @@ export const mintContractAddress = '0xd6915560d3bb24aec04dc42ef409921ed1931510';
 export const mintABI = [
   {
     inputs: [
-      { internalType: "contract IMinter1155", name: "minter", type: "address" },
-      { internalType: "uint256", name: "tokenId", type: "uint256" },
-      { internalType: "uint256", name: "quantity", type: "uint256" },
+      { internalType: 'contract IMinter1155', name: 'minter', type: 'address' },
+      { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
+      { internalType: 'uint256', name: 'quantity', type: 'uint256' },
       {
-        internalType: "address[]",
-        name: "rewardsRecipients",
-        type: "address[]",
+        internalType: 'address[]',
+        name: 'rewardsRecipients',
+        type: 'address[]',
       },
-      { internalType: "bytes", name: "minterArguments", type: "bytes" },
+      { internalType: 'bytes', name: 'minterArguments', type: 'bytes' },
     ],
-    name: "mint",
+    name: 'mint',
     outputs: [],
-    stateMutability: "payable",
-    type: "function",
+    stateMutability: 'payable',
+    type: 'function',
   }
 ];
