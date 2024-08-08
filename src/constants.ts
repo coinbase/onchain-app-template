@@ -20,11 +20,11 @@ export const mintABI = [
       { internalType: 'address', name: 'collection', type: 'address' },
       { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
       { internalType: 'address', name: 'mintReferral', type: 'address' },
-      { internalType: 'string', name: 'comment', type: 'string' }
+      { internalType: 'string', name: 'comment', type: 'string' },
     ],
     name: 'mint',
     outputs: [],
     stateMutability: 'payable',
-    type: 'function'
+    type: 'function',
   }
 ] as const;
