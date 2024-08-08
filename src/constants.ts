@@ -26,5 +26,5 @@ export const mintABI = [
     outputs: [],
     stateMutability: 'payable',
     type: 'function',
-  }
+  },
 ] as const;
