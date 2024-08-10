@@ -1,5 +1,5 @@
 
-# Onchain App Template
+# Token Machine Template
 
 An Onchain App Template build with [OnchainKit](https://onchainkit.xyz), and ready to be deployed to Vercel.
 
