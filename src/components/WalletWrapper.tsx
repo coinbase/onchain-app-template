@@ -43,7 +43,7 @@ export default function WalletWrapper({
             <EthBalance />
           </Identity>
           <WalletDropdownLink icon="wallet" href="https://wallet.coinbase.com">
-            Go to Wallet Dashboard
+            Wallet
           </WalletDropdownLink>
           <WalletDropdownDisconnect />
         </WalletDropdown>

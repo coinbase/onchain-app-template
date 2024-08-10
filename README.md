@@ -1,17 +1,9 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/coinbase/onchainkit/main/site/docs/public/logo/v0-27.png">
-    <img alt="OnchainKit logo vibes" src="https://raw.githubusercontent.com/coinbase/onchainkit/main/site/docs/public/logo/v0-27.png" width="auto">
-  </picture>
-</p>
 
 # Onchain App Template
 
 An Onchain App Template build with [OnchainKit](https://onchainkit.xyz), and ready to be deployed to Vercel.
 
-Play with it live on https://onchain-app-template.vercel.app
-
-Have fun! ⛵️
+The template is a simple swap app made with the OnchainKit [Swap component](https://onchainkit.xyz/docs/swap/swap).
 
 <br />
 
@@ -36,7 +28,10 @@ NEXT_PUBLIC_WC_PROJECT_ID="GET_FROM_WALLET_CONNECT"
 
 ```sh
 # Install bun in case you don't have it
-bun curl -fsSL <https://bun.sh/install> | bash
+curl -fsSL https://bun.sh/install | bash # for macOS, Linux, and WSL
+# to install a specific version
+curl -fsSL https://bun.sh/install | bash -s "bun-v1.0.0"
+
 
 # Install packages
 bun i
