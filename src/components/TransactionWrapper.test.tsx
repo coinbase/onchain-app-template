@@ -36,7 +36,7 @@ const renderWithProviders = (component: JSX.Element) => {
 describe('TransactionWrapper', () => {
   it('should renders', () => {
     renderWithProviders(<TransactionWrapper address="0x" />);
-    const transaction = screen.getByText('Collect');
+    const transaction = screen.getByText('Transact');
     expect(transaction).toBeInTheDocument();
   });
 });
