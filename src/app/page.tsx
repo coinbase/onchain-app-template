@@ -38,7 +38,7 @@ export default function Page() {
           </div>
         </div>
         {address ? (
-          <TransactionWrapper address={address} />
+          <TransactionWrapper />
         ) : (
           <WalletWrapper
             className="w-[450px] max-w-full"
