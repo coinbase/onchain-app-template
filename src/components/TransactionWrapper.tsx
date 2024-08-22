@@ -10,20 +10,14 @@ import type {
   TransactionError,
   TransactionResponse,
 } from '@coinbase/onchainkit/transaction';
-import type { Address, ContractFunctionParameters } from 'viem';
+import type { ContractFunctionParameters } from 'viem';
 import {
   BASE_SEPOLIA_CHAIN_ID,
   clickContractABI,
   clickContractAddress,
 } from '../constants';
 
-type TransactionWrapperParams = {
-  address: Address;
-};
-
-export default function TransactionWrapper({
-  address,
-}: TransactionWrapperParams) {
+export default function TransactionWrapper() {
   const contracts = [
     {
       address: clickContractAddress,
@@ -44,7 +38,6 @@ export default function TransactionWrapper({
   return (
     <div className="flex w-[450px]">
       <Transaction
-        address={address}
         contracts={contracts}
         className="w-[450px]"
         chainId={BASE_SEPOLIA_CHAIN_ID}
