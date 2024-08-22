@@ -11,8 +11,8 @@ import {
   Wallet,
   WalletDropdown,
   WalletDropdownBasename,
-  WalletDropdownFundLink,
   WalletDropdownDisconnect,
+  WalletDropdownFundLink,
   WalletDropdownLink,
 } from '@coinbase/onchainkit/wallet';
 
