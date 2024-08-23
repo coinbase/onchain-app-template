@@ -13,16 +13,16 @@ import type {
 import type { ContractFunctionParameters } from 'viem';
 import {
   BASE_SEPOLIA_CHAIN_ID,
-  clickContractABI,
-  clickContractAddress,
+  mintABI,
+  mintContractAddress
 } from '../constants';
 
 export default function TransactionWrapper() {
   const contracts = [
     {
-      address: clickContractAddress,
-      abi: clickContractABI,
-      functionName: 'click',
+      address: mintContractAddress,
+      abi: mintABI,
+      functionName: 'mint',
       args: [],
     },
   ] as unknown as ContractFunctionParameters[];

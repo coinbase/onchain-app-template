@@ -15,20 +15,13 @@ export const clickContractABI = [
 
 export const collectionAddress = '0xd6915560d3bb24aec04dc42ef409921ed1931510';
 export const comment = 'testing';
-export const mintContractAddress = '0x777777722D078c97c6ad07d9f36801e653E356Ae';
+export const mintContractAddress = '0x11b4128A343d9aB02bED83050c952f383EAb6B24';
 export const mintABI = [
   {
-    inputs: [
-      { internalType: 'address', name: 'mintTo', type: 'address' },
-      { internalType: 'uint256', name: 'quantity', type: 'uint256' },
-      { internalType: 'address', name: 'collection', type: 'address' },
-      { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
-      { internalType: 'address', name: 'mintReferral', type: 'address' },
-      { internalType: 'string', name: 'comment', type: 'string' },
-    ],
+    inputs: [],
     name: 'mint',
     outputs: [],
-    stateMutability: 'payable',
+    stateMutability: 'nonpayable',
     type: 'function',
   },
 ] as const;
