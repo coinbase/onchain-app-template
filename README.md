@@ -17,7 +17,7 @@ Have fun! ⛵️
 
 ## Setup
 
-To ensure all components work seamlessly, set the following environment variables in your `.env` file using `.local.env.example` as a reference.
+To ensure all components work seamlessly, set the following environment variables in your `.env` file using `.env.local.example` as a reference.
 
 You can find the API key on the [Coinbase Developer Portal's OnchainKit page](https://portal.cdp.coinbase.com/products/onchainkit). If you don't have an account, you will need to create one. 
 
@@ -36,7 +36,7 @@ NEXT_PUBLIC_WC_PROJECT_ID="GET_FROM_WALLET_CONNECT"
 
 ```sh
 # Install bun in case you don't have it
-bun curl -fsSL <https://bun.sh/install> | bash
+curl -fsSL https://bun.sh/install | bash
 
 # Install packages
 bun i
@@ -54,4 +54,4 @@ bun run dev
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
