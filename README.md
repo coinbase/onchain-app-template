@@ -55,3 +55,9 @@ bun run dev
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Need more help?
+
+If you have any questions or need help, feel free to reach out to us on [Discord](https://discord.gg/8gW3h6w5) 
+or open a [Github issue](https://github.com/coinbase/onchainkit/issues) or DMs us 
+on X at [@onchainkit](https://x.com/onchainkit), [@zizzamia](https://x.com/zizzamia), [@fkpxls](https://x.com/fkpxls).
