@@ -6,7 +6,7 @@ import { mock } from 'wagmi/connectors';
 import OnchainProviders from './OnchainProviders';
 
 vi.mock('../wagmi', () => ({
-  useWamigConfig: () =>
+  useWagmiConfig: () =>
     createConfig({
       chains: [base],
       connectors: [
