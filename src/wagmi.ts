@@ -10,7 +10,7 @@ import { http, createConfig } from 'wagmi';
 import { base, baseSepolia } from 'wagmi/chains';
 import { NEXT_PUBLIC_WC_PROJECT_ID } from './config';
 
-export function useWamigConfig() {
+export function useWagmiConfig() {
   const projectId = NEXT_PUBLIC_WC_PROJECT_ID ?? '';
   if (!projectId) {
     const providerErrMessage =
