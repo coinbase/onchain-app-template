@@ -10,20 +10,20 @@ import type {
   TransactionError,
   TransactionResponse,
 } from '@coinbase/onchainkit/transaction';
-import type { ContractFunctionParameters } from 'viem';
+import type { Address, ContractFunctionParameters } from 'viem';
 import {
   BASE_SEPOLIA_CHAIN_ID,
   mintABI,
   mintContractAddress,
 } from '../constants';
 
-export default function TransactionWrapper() {
+export default function TransactionWrapper({ address }: { address: Address }) {
   const contracts = [
     {
       address: mintContractAddress,
       abi: mintABI,
       functionName: 'mint',
-      args: [],
+      args: [address],
     },
   ] as unknown as ContractFunctionParameters[];
 

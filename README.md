@@ -49,6 +49,7 @@ bun run dev
 ## Resources
 
 - [OnchainKit documentation](https://onchainkit.xyz)
+- We use the [OnchainKit Early Adopter](https://github.com/neodaoist/onchainkit-early-adopter) contract written by neodaoist [[X]](https://x.com/neodaoist)
 
 <br />
 
