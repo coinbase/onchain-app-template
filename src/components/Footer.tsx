@@ -7,7 +7,7 @@ import {
   ONCHAINKIT_LINK,
   TWITTER_LINK,
 } from 'src/links';
-import { motion } from 'framer-motion'; // Import motion from framer-motion
+import { motion } from 'framer-motion';
 import ArrowSvg from 'src/svg/ArrowSvg';
 
 const docLinks = [
