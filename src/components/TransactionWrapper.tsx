@@ -44,7 +44,7 @@ export default function TransactionWrapper({ address }: { address: Address }) {
         onError={handleError}
         onSuccess={handleSuccess}
       >
-        <TransactionButton className="mt-0 mr-auto ml-auto w-[450px] max-w-full text-[white]" />
+        <TransactionButton text="Claim Early Adopter Badge"className="mt-0 mr-auto ml-auto w-[450px] max-w-full text-[white]" />
         <TransactionStatus>
           <TransactionStatusLabel />
           <TransactionStatusAction />
