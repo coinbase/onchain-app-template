@@ -1,17 +1,10 @@
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from '../config';
+import Providers from '../components/Providers';
 
 import './global.css';
 import '@coinbase/onchainkit/styles.css';
 import '@rainbow-me/rainbowkit/styles.css';
-import dynamic from 'next/dynamic';
-
-const OnchainProviders = dynamic(
-  () => import('src/components/OnchainProviders'),
-  {
-    ssr: false,
-  },
-);
 
 export const viewport = {
   width: 'device-width',
@@ -19,11 +12,11 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Onchain App Template',
-  description: 'Built with OnchainKit',
+  title: 'Chainable Guru',
+  description: 'Cross-Chain DeFi Platform',
   openGraph: {
-    title: 'Onchain App Template',
-    description: 'Built with OnchainKit',
+    title: 'Chainable Guru',
+    description: 'Cross-Chain DeFi Platform',
     images: [`${NEXT_PUBLIC_URL}/vibes/vibes-19.png`],
   },
 };
@@ -34,7 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex items-center justify-center">
-        <OnchainProviders>{children}</OnchainProviders>
+        <Providers>
+          <div>
+            {children}
+          </div>
+        </Providers>
       </body>
     </html>
   );
