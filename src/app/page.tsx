@@ -1,7 +1,7 @@
 'use client';
 
 import { useAccount } from 'wagmi';
-import { useAppKit, useAppKitAccount, useAppKitNetwork, useAppKitProvider } from '@reown/appkit/react';
+import { useAppKit, useAppKitAccount, useAppKitNetwork } from '@reown/appkit/react';
 import { useEffect, useState } from 'react';
 
 export default function Page() {
@@ -9,7 +9,6 @@ export default function Page() {
   const { open } = useAppKit();
   const { isConnected, caipAddress } = useAppKitAccount();
   const { caipNetwork, chainId } = useAppKitNetwork();
-  const { walletProvider } = useAppKitProvider(caipNetwork?.namespace || 'eip155');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
