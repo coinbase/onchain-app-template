@@ -4,7 +4,7 @@ import { WagmiProvider } from 'wagmi';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi';
 import { SolanaAdapter } from '@reown/appkit-adapter-solana';
-import { createAppKit } from '@reown/appkit/react';
+import { createAppKit, type AppKitNetwork } from '@reown/appkit/react';
 import { useEffect, useState } from 'react';
 import { 
   solana, 
@@ -20,34 +20,48 @@ import React from 'react';
 // Create QueryClient
 const queryClient = new QueryClient();
 
-// Define supported networks
-const networks = [
-  mainnet,
-  arbitrum,
-  polygon,
-  optimism,
-  base,
-  solana
+interface Metadata {
+  name: string;
+  description: string;
+  url: string;
+  icons: string[];
+  verifyUrl?: string;
+  redirect?: {
+    native?: string;
+    universal?: string;
+  };
+}
+
+// Define supported networks with proper typing
+const networks: [AppKitNetwork, ...AppKitNetwork[]] = [
+  mainnet as AppKitNetwork,
+  arbitrum as AppKitNetwork,
+  polygon as AppKitNetwork,
+  optimism as AppKitNetwork,
+  base as AppKitNetwork,
+  solana as AppKitNetwork
 ];
 
 // Create Wagmi Adapter
 const wagmiAdapter = new WagmiAdapter({
-  networks,
+  networks: networks.filter(n => n.id !== solana.id),
   projectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID || '',
   ssr: true,
 });
 
-// Create Solana adapter
+// Create Solana adapter with proper configuration
 const solanaAdapter = new SolanaAdapter({
-  wallets: [new PhantomWalletAdapter(), new SolflareWalletAdapter()]
+  wallets: [new PhantomWalletAdapter(), new SolflareWalletAdapter()],
+  network: solana.id,
+  rpcUrl: solana.rpcUrls.default.http[0]
 });
 
-export default function Providers({ children }: { children: React.ReactNode }) {
+export default function Providers({ children }: { children: React.ReactNode }): JSX.Element {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const metadata = {
+      const metadata: Metadata = {
         name: 'Chainable Guru',
         description: 'Cross-Chain DeFi Platform',
         url: process.env.NEXT_PUBLIC_ENVIRONMENT || '',
@@ -59,7 +73,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         adapters: [wagmiAdapter, solanaAdapter],
         networks,
         projectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID || '',
-        metadata: metadata,
+        metadata,
         features: {
           onramp: true,
           swaps: true

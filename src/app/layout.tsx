@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from '../config';
 import Providers from '../components/Providers';
+import React from 'react';
 
 import './global.css';
 import '@coinbase/onchainkit/styles.css';
@@ -23,17 +24,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: { children: React.ReactNode }) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className="flex items-center justify-center">
         <Providers>
-          <div>
-            {children}
-          </div>
+          {children}
         </Providers>
       </body>
     </html>
   );
 }
-  
