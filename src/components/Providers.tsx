@@ -6,7 +6,6 @@ import { WagmiAdapter } from '@reown/appkit-adapter-wagmi';
 import { SolanaAdapter } from '@reown/appkit-adapter-solana';
 import { createAppKit } from '@reown/appkit/react';
 import { useEffect, useState } from 'react';
-import { type AppKitNetwork } from '@reown/appkit/react';
 import { 
   solana, 
   mainnet, 
@@ -21,14 +20,14 @@ import React from 'react';
 // Create QueryClient
 const queryClient = new QueryClient();
 
-// Define supported networks as AppKitNetwork array
-const networks: [AppKitNetwork, ...AppKitNetwork[]] = [
-  mainnet as AppKitNetwork,
-  arbitrum as AppKitNetwork,
-  polygon as AppKitNetwork,
-  optimism as AppKitNetwork,
-  base as AppKitNetwork,
-  solana as AppKitNetwork
+// Define supported networks
+const networks = [
+  mainnet,
+  arbitrum,
+  polygon,
+  optimism,
+  base,
+  solana
 ];
 
 // Create Wagmi Adapter

@@ -23,10 +23,27 @@ export default function Page() {
     open({ view: 'Connect' });
   };
 
-  // Format the address for display
+  const handleNetworkSelect = () => {
+    open({ view: 'Networks' });
+  };
+
+  // Format the address for display based on network type
   const formatAddress = (addr: string) => {
     if (!addr) return '';
+    // Check if it's a Solana address (they're 44 characters long)
+    if (addr.length === 44) {
+      return `${addr.slice(0, 4)}...${addr.slice(-4)}`;
+    }
+    // For EVM addresses
     return `${addr.slice(0, 6)}...${addr.slice(-4)}`;
+  };
+
+  // Get the current address based on network
+  const getCurrentAddress = () => {
+    if (!caipAddress) return '';
+    // Extract the actual address from CAIP format (e.g., eip155:1:0x... or solana:mainnet:...)
+    const addressParts = caipAddress.split(':');
+    return addressParts[addressParts.length - 1];
   };
 
   if (!mounted) {
@@ -43,14 +60,18 @@ export default function Page() {
             <div className="flex items-center space-x-4">
               {isConnected ? (
                 <div className="flex items-center gap-4">
-                  {address && (
+                  {caipAddress && (
                     <div className="text-sm text-gray-300 flex items-center gap-2">
-                      <span className="font-medium">{formatAddress(address)}</span>
-                      {caipNetwork && (
-                        <span className="px-2 py-1 bg-gray-800 rounded-md text-xs">
-                          {caipNetwork.name}
-                        </span>
-                      )}
+                      <span className="font-medium">{formatAddress(getCurrentAddress())}</span>
+                      <button
+                        onClick={handleNetworkSelect}
+                        className="px-2 py-1 bg-gray-800 rounded-md text-xs hover:bg-gray-700 flex items-center gap-1"
+                      >
+                        {caipNetwork?.name}
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
                     </div>
                   )}
                   <button
@@ -61,12 +82,20 @@ export default function Page() {
                   </button>
                 </div>
               ) : (
-                <button
-                  onClick={handleConnect}
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
-                >
-                  Connect Wallet
-                </button>
+                <>
+                  <button
+                    onClick={handleNetworkSelect}
+                    className="rounded-md bg-gray-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500"
+                  >
+                    Select Network
+                  </button>
+                  <button
+                    onClick={handleConnect}
+                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+                  >
+                    Connect Wallet
+                  </button>
+                </>
               )}
             </div>
           </div>
@@ -82,14 +111,36 @@ export default function Page() {
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Swap tokens across multiple chains with the best rates and lowest fees
           </p>
-          {isConnected && address && (
-            <div className="mt-4 text-lg text-gray-300 space-y-2">
-              <div>Connected: <span className="font-medium">{formatAddress(address)}</span></div>
-              {caipNetwork && (
-                <div className="text-sm">
-                  Network: <span className="font-medium">{caipNetwork.name}</span>
+          
+          {/* Wallet Info Section */}
+          {isConnected && caipAddress && (
+            <div className="mt-8 p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 max-w-md mx-auto">
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-400">Address:</span>
+                  <span className="font-medium">{formatAddress(getCurrentAddress())}</span>
                 </div>
-              )}
+                {caipNetwork && (
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Network:</span>
+                    <button
+                      onClick={handleNetworkSelect}
+                      className="font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
+                    >
+                      {caipNetwork.name}
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                )}
+                {chainId && (
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Chain ID:</span>
+                    <span className="font-medium text-gray-300">{chainId}</span>
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>
