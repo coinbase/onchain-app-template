@@ -135,10 +135,10 @@
   resolved "https://registry.yarnpkg.com/@biomejs/cli-win32-x64/-/cli-win32-x64-1.9.1.tgz#f754bb8a94f2dab6311eff39dc30c4a6aa0f5628"
   integrity sha512-liSRWjWzFhyG7s1jg/Bbv9FL+ha/CEd5tFO3+dFIJNplL4TnvAivtyfRVi/tu/pNjISbV1k9JwdBewtAKAgA0w==
 
-"@coinbase/onchainkit@^0.32.0":
-  version "0.32.0"
-  resolved "https://registry.yarnpkg.com/@coinbase/onchainkit/-/onchainkit-0.32.0.tgz#7cfb90d9bb4ecc46fab2ade83d63426845e0d4bd"
-  integrity sha512-vLOrNDmg7V5vVddiqBDV4OkIMGz2aQoFebSYAbL4CI6kTs/NtdWTYop8AAJyQ615h7VP3pNSQH+qOZX0lAKQNA==
+"@coinbase/onchainkit@^0.33.6":
+  version "0.33.6"
+  resolved "https://registry.yarnpkg.com/@coinbase/onchainkit/-/onchainkit-0.33.6.tgz#f33aec43bac1c776544f2de71504c1a1a4dd5f5f"
+  integrity sha512-JEAsilN2+wQtbp9z+SDDIkkrmlKFz9VlJZv9h4b1aswdYBKkzY9gytvb708CnzhD+pvoLZwaxPWihg7LXFjtFQ==
   dependencies:
     "@rainbow-me/rainbowkit" "^2.1.3"
     "@tanstack/react-query" "^5"
@@ -2575,9 +2575,9 @@ electron-to-chromium@^1.5.4:
   integrity sha512-0x0wLCmpdKFCi9ulhvYZebgcPmHTkFVUfU2wzDykadkslKwT4oAmDTHEKLnlrDsMGZe4B+ksn8quZfZjYsBetA==
 
 elliptic@^6.5.4, elliptic@^6.5.7:
-  version "6.5.7"
-  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.7.tgz#8ec4da2cb2939926a1b9a73619d768207e647c8b"
-  integrity sha512-ESVCtTwiA+XhY3wyh24QqRGBoP3rEdDUl3EDUUo9tft074fi19IrdpH7hLCMMP3CIj7jb3W96rn8lt/BqIlt5Q==
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.6.0.tgz#5919ec723286c1edf28685aa89261d4761afa210"
+  integrity sha512-dpwoQcLc/2WLQvJvLRHKZ+f9FgOdjnq11rurqwekGQygGPsYSK29OMMD2WalatiqQ+XGFDglTNixpPfI+lpaAA==
   dependencies:
     bn.js "^4.11.9"
     brorand "^1.1.0"
