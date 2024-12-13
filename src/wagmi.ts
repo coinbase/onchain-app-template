@@ -13,6 +13,7 @@ import { NEXT_PUBLIC_WC_PROJECT_ID } from './config';
 export function useWagmiConfig() {
   const projectId = NEXT_PUBLIC_WC_PROJECT_ID ?? '';
   if (!projectId) {
+    console.log("WC Project ID:", process.env.NEXT_PUBLIC_WC_PROJECT_ID);
     const providerErrMessage =
       'To connect to all Wallets you need to provide a NEXT_PUBLIC_WC_PROJECT_ID env variable';
     throw new Error(providerErrMessage);
