@@ -18,14 +18,14 @@ const ORGANIZATIONS = [
     id: 2,
     name: "Save the Kittens",
     description: "Help us save the kittens! They are in danger of being killed by the evil cat killers. We need to raise $1000 to save them. This is written by AI.",
-    address: "0x123...789", // Replace with actual address
+    address: "0xd8ea779b8ffc1096ca422d40588c4c0641709890", // Replace with actual address
     image: "images/cat.jpg"
   },
   { 
     id: 3,
     name: "Forgot the name",
     description: "Help us save the kittens! They are in danger of being killed by the evil cat killers. We need to raise $1000 to save them. This is written by AI.",
-    address: "0x123...789", // Replace with actual address
+    address: "0xd8ea779b8ffc1096ca422d40588c4c0641709890 ", // Replace with actual address
     image: "images/cat.jpg"
   },
   { 
@@ -46,7 +46,7 @@ export default function OrganizationPage({ params }: { params: { id: string } })
   
   const organization = ORGANIZATIONS.find(org => org.id === parseInt(id));
   
-  const { data: balance, isError: balanceError, isLoading: balanceLoading } = useBalance({
+  const { data: balance, isError: balanceError, isLoading: balanceLoading, refetch } = useBalance({
     address: organization?.address as `0x${string}`,
   });
 
@@ -103,9 +103,30 @@ export default function OrganizationPage({ params }: { params: { id: string } })
       return <div className="text-red-500">Error loading balance</div>;
     }
     return (
-      <p className="text-sm text-gray-600">
-        Balance: {balance?.formatted} {balance?.symbol}
-      </p>
+      <div className="flex items-center gap-2">
+        <p className="text-sm text-gray-600">
+          Balance: {balance?.formatted} {balance?.symbol}
+        </p>
+        <button 
+          onClick={() => refetch()} 
+          className="p-1 rounded-full hover:bg-gray-100"
+          title="Refresh balance"
+        >
+          <svg 
+            className="w-4 h-4 text-gray-600" 
+            fill="none" 
+            strokeWidth="2" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" 
+            />
+          </svg>
+        </button>
+      </div>
     );
   };
 
