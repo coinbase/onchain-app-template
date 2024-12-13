@@ -8,10 +8,26 @@ import WalletWrapper from 'src/components/WalletWrapper';
 import { motion } from 'framer-motion';
 
 const ORGANIZATIONS = [
-  { name: "Red Cross", buttonText: "Donate to Red Cross" },
-  { name: "UNICEF", buttonText: "Support UNICEF" },
-  { name: "Save the Children", buttonText: "Help CATS" },
-  { name: "WHO", buttonText: "Support WHO?" }
+  { 
+    name: "Red Cross", 
+    buttonText: "Donate to Red Cross",
+    imageUrl: "/images/red-cross.jpg"
+  },
+  { 
+    name: "UNICEF", 
+    buttonText: "Support UNICEF",
+    imageUrl: "/images/unicef-logo.png"
+  },
+  { 
+    name: "Save the Kittens", 
+    buttonText: "Help CATS",
+    imageUrl: "/images/cat.jpg"
+  },
+  { 
+    name: "WHO", 
+    buttonText: "Support WHO?",
+    imageUrl: "/images/who.jpg"
+  }
 ];
 
 export default function Page() {
@@ -53,9 +69,11 @@ export default function Page() {
                   <div key={index} className="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer"
                        onClick={() => window.location.href = `/organization/${index + 1}`}
                   >
-                    <div className="w-24 h-24 mb-3 bg-gray-200 rounded-full">
-                      {/* Placeholder for organization image */}
-                    </div>
+                    <img 
+                      src={org.imageUrl}
+                      alt={org.name}
+                      className="w-24 h-24 mb-3 rounded-full object-cover"
+                    />
                     <button className="mt-2 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
                       {org.buttonText}
                     </button>

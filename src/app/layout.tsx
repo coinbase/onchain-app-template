@@ -5,6 +5,7 @@ import './global.css';
 import '@coinbase/onchainkit/styles.css';
 import dynamic from 'next/dynamic';
 import { Providers } from 'src/components/Providers';
+import { Toaster } from 'sonner';
 
 export const viewport = {
   width: 'device-width',
@@ -26,7 +27,7 @@ export default function RootLayout({
 }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="flex items-center justify-center">
+      <body>
         <Providers>{children}</Providers>
       </body>
     </html>
