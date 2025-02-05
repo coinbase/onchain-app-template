@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import Footer from './Footer';
 import {
   DISCORD_LINK,
   FIGMA_LINK,
@@ -8,6 +7,7 @@ import {
   ONCHAINKIT_LINK,
   TWITTER_LINK,
 } from '../links';
+import Footer from './Footer';
 
 describe('Footer', () => {
   it('renders the footer component', () => {
