@@ -6,8 +6,8 @@ import {
   GITHUB_LINK,
   ONCHAINKIT_LINK,
   TWITTER_LINK,
-} from 'src/links';
-import ArrowSvg from 'src/svg/ArrowSvg';
+} from '../links';
+import ArrowSvg from '../svg/ArrowSvg';
 
 const docLinks = [
   { href: ONCHAINKIT_LINK, title: 'Docs' },
