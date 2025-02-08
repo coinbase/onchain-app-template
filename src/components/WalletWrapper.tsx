@@ -19,18 +19,15 @@ import {
 type WalletWrapperParams = {
   text?: string;
   className?: string;
-  withWalletAggregator?: boolean;
 };
 export default function WalletWrapper({
   className,
   text,
-  withWalletAggregator = false,
 }: WalletWrapperParams) {
   return (
     <>
       <Wallet>
         <ConnectWallet
-          withWalletAggregator={withWalletAggregator}
           text={text}
           className={className}
         >
