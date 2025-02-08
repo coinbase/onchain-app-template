@@ -6,7 +6,6 @@ import { ONCHAINKIT_LINK } from 'src/links';
 import OnchainkitSvg from 'src/svg/OnchainkitSvg';
 import { useAccount } from 'wagmi';
 import LoginButton from '../components/LoginButton';
-import SignupButton from '../components/SignupButton';
 
 export default function Page() {
   const { address } = useAccount();
@@ -23,10 +22,7 @@ export default function Page() {
           >
             <OnchainkitSvg />
           </a>
-          <div className="flex items-center gap-3">
-            <SignupButton />
-            {!address && <LoginButton />}
-          </div>
+          <div className="flex items-center gap-3">{<LoginButton />}</div>
         </div>
       </section>
       <section className="templateSection flex w-full flex-col items-center justify-center gap-4 rounded-xl bg-gray-100 px-2 py-4 md:grow">

@@ -19,21 +19,15 @@ import {
 type WalletWrapperParams = {
   text?: string;
   className?: string;
-  withWalletAggregator?: boolean;
 };
 export default function WalletWrapper({
   className,
   text,
-  withWalletAggregator = false,
 }: WalletWrapperParams) {
   return (
     <>
       <Wallet>
-        <ConnectWallet
-          withWalletAggregator={withWalletAggregator}
-          text={text}
-          className={className}
-        >
+        <ConnectWallet text={text} className={className}>
           <Avatar className="h-6 w-6" />
           <Name />
         </ConnectWallet>
