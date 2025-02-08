@@ -32,5 +32,5 @@ export function useWagmiConfig() {
     });
 
     return wagmiConfig;
-  }, [projectId]);
+  }, []);
 }
