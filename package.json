@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@coinbase/onchainkit": "^0.35.6",
-    "next": "^14.2.5",
+    "next": "^14.2.15",
     "permissionless": "^0.1.26",
     "react": "^18",
     "react-dom": "^18",
