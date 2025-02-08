@@ -3,8 +3,8 @@
 import { useMemo } from 'react';
 import { http, createConfig } from 'wagmi';
 import { base, baseSepolia } from 'wagmi/chains';
-import { NEXT_PUBLIC_WC_PROJECT_ID } from './config';
 import { coinbaseWallet } from 'wagmi/connectors';
+import { NEXT_PUBLIC_WC_PROJECT_ID } from './config';
 
 export function useWagmiConfig() {
   const projectId = NEXT_PUBLIC_WC_PROJECT_ID ?? '';
