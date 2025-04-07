@@ -46,6 +46,12 @@ bun run dev
 ```
 <br />
 
+## Deploy 
+
+Deploy instantly with Vercel to explore a working example
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcoinbase%2Fonchain-app-template%23)
+
 ## Resources
 
 - [OnchainKit documentation](https://onchainkit.xyz)
