@@ -54,6 +54,8 @@ bun run dev
 
 ## Resources
 
+- [OnchainKit Cursor Rules](https://cursor.directory/onchainkit)
+- [OnchainKit llms.txt](https://docs.base.org/builderkits/onchainkit/llms.txt)
 - [OnchainKit Documentation](https://onchainkit.xyz)
 - [OnchainKit Early Adopter Contract](https://github.com/neodaoist/onchainkit-early-adopter) by neodaoist [[X]](https://x.com/neodaoist)
 
